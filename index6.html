@@ -24,14 +24,51 @@
         .center {
             align-items: center;
         }
+        .stretch {
+            align-items: stretch;
+        }
+        .flex-start{
+            align-items: flex-start;
+        }
+        .flex-end{
+            align-items: flex-end;
+        }
+        .baseline {
+            align-items: baseline;
+        }
     </style>
 </head>
 <body> 
     <p>center</p>
     <section class="container center flex 1">
-        <civ class="item">1</civ>
-        <civ class="item">item2</civ>
-        <civ class="item">3 com conteúdos maiores</civ>
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">3 com conteúdos maiores</div>
+    </section>
+
+    <p>stretch</p>
+    <section class="container stretch flex 1">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">3 com conteúdos maiores</div> <!--essa propriedade faz com que eles cresçam de acordo com o maior item dentro do container-->
+    </section>
+    <p>flex-start</p>
+    <section class="container flex-start flex 1">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">3 com conteúdos maiores</div> <!--como estamos trabalhando com linha, ele vai trazer esses elementos ao topo-->
+    </section>
+    <p>flex-end</p>
+    <section class="container flex-end flex 1">
+        <div class="item">1</div>
+        <div class="item">item2</div>
+        <div class="item">3 com conteúdos maiores</div> <!--e agora os itens são mostrados na parte de baixo-->
+    </section>
+    <p>baseline</p>
+    <section class="container baseline ">
+        <div class="item"><br>1</div> <!--essa quebra de linha mostra o que tá acontecendo, ele pega a linha como base para as outras-->
+        <div class="item">item2 teste</div>
+        <div class="item">3 com conteúdos maiores</div> <!--e agora os itens são mostrados na parte de baixo-->
     </section>
 </body>
 </html>

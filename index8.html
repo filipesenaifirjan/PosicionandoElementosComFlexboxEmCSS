@@ -10,6 +10,8 @@
             display: flex;
             border: 2px solid black;
             max-width: 300px;
+            margin-bottom: 20px;
+            justify-content: center; <!--repare que ele só vai funcionar onde tem espaço sobrando, no caso do flex-grow-0-->
         }
         .item{
             background-color: orangered;
@@ -18,9 +20,55 @@
             text-align: center;
             color: white;
         }
+        .fg-0 {
+            flex-grow: 0;
+
+        }
+        .fg-1 {
+            flex-grow: 1;
+
+        }
+        .fg-2 {
+            flex-grow: 2;
+
+        }
+        .fg-3 {
+            flex-grow: 3;
+
+        }
     </style>
 </head>
 <body>
-    
+    <h2>flex-grow 0</h2>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-0">C</div>
+        <div class="item fg-0">D</div>
+    </div>
+
+    <h2>flex-grow 1</h2>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+
+    <h2>flex-grow alternados</h2>
+    <div class="flex-container">
+        <div class="item fg-2">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+
+    <h2>flex-grow 2</h2>
+    <div class="flex-container">
+        <div class="item fg-2">A</div>
+        <div class="item fg-2">BC</div>
+        <div class="item fg-2">CCCC</div>
+        <div class="item fg-2">DDDDDD</div>
+    </div>
 </body>
-</html>
+</html> <!--basicamente ele trata a proporção do crescimento-->
